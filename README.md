@@ -17,8 +17,8 @@
 This toolkit provides a unified environment for simulating and analyzing Ising-type models from the baseline 2D nearest-neighbor system to long-range RKKY-coupled variants. It implements multiple Monte Carlo strategies with optional annealing schedules, enabling quantitative studies of energy, magnetization, susceptibility, heat capacity, and critical exponents. It also supports side-by-side algorithm comparisons near criticality and in rugged energy landscapes.
 
 **Benchmarks (2D Ising)**  
-- Critical temperature `\(T_c \approx 2.269\)`  
-- Critical exponents `\(\beta = 0.125 \pm 0.003\), \(\gamma = 1.75 \pm 0.05\)`
+- Critical temperature $\(T_c \approx 2.269\)$ 
+- Critical exponents $\(\beta = 0.125 \pm 0.003\)$, $\(\gamma = 1.75 \pm 0.05\)$
 
 
 
