@@ -23,7 +23,8 @@ This toolkit provides a unified environment for simulating and analyzing Ising-t
 **Algorithmic takeaways**  
 - **Swendsen–Wang**: best efficiency near \(T_c\) (mitigates critical slowing down).  
 - **BSAISA**: robust convergence from disordered initial states and rough landscapes.  
-- **Metropolis / Heat Bath**: solid baselines; performance degrades near \(T_c\) without clustering.
+- **Metropolis**: solid baselines; performance degrades near \(T_c\) without clustering.
+- **Heat Bath**: solid baselines; performance degrades near \(T_c\) without clustering.
 
 ---
 
