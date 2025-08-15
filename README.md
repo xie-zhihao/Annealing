@@ -7,7 +7,7 @@
 **Zhihao Xie**¹\* · **Chenran Kang**² · **Tin Htoo**² · **Joey Wat**²˒³ · **Julia Corrales**² · **Thomas Hallal**¹˒²  
 ¹ Department of Mathematics, University of California, Berkeley, CA 94720, USA  
 ² Department of Physics, University of California, Berkeley, CA 94720, USA  
-³ Department of Physics, The Hong Kong University of Science and Technology, Clear Water Bay  
+³ Department of Physics, The Hong Kong University of Science and Technology, Clear Water Bay, HKSAR, China  
 \*Corresponding Contact: **xiezhihao-justin@berkeley.edu** · **xiezhihao2021@foxmail.com**
 
 ---
@@ -23,10 +23,10 @@ This toolkit provides a unified environment for simulating and analyzing Ising-t
 
 
 **Algorithmic takeaways**  
-- **Swendsen–Wang**: best efficiency near \(T_c\) (mitigates critical slowing down).  
+- **Swendsen–Wang**: best efficiency near $\(T_c\)$ (mitigates critical slowing down).  
 - **BSAISA**: robust convergence from disordered initial states and rough landscapes.  
-- **Metropolis**: solid baselines; performance degrades near \(T_c\) without clustering.
-- **Heat Bath**: solid baselines; performance degrades near \(T_c\) without clustering.
+- **Metropolis**: solid baselines; performance degrades near $\(T_c\)$ without clustering.
+- **Heat Bath**: solid baselines; performance degrades near $\(T_c\)$ without clustering.
 
 ---
 
@@ -34,14 +34,14 @@ This toolkit provides a unified environment for simulating and analyzing Ising-t
 
 ### 2.1 Ising (baseline)
 - Dimensions: 1D / 2D / 3D (2D nearest-neighbor by default)  
-- Spins: \(\sigma_i \in \{+1, -1\}\)  
+- Spins: $\(\sigma_i \in \{+1, -1\}\)$  
 - Interactions: nearest-neighbor coupling; optional external field
 
 ### 2.2 RKKY long-range generalizations
 - Oscillatory long-range coupling:
-  \[
+  $$\[
   J_{ij} = A \cdot \frac{\sin(2 k_F R_{ij})}{(2 k_F R_{ij})^2},
-  \]
+  \]$$
   where \(R_{ij}\) is pair distance and \(k_F\) the Fermi wavevector.  
 - Features: competing interactions → **frustration** and multi-valley energy landscapes  
 - Implementation: distance cutoff \(D_{\text{cut}}\) to balance accuracy and cost
