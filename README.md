@@ -1,6 +1,6 @@
 # Ising-Type Prediction Toolkit
 
-> A modular simulation toolkit for classical spin systems, covering **two model families** (Ising and RKKY long-range generalizations) and **four algorithms** (each runnable with **annealing** or at a **fixed temperature**). Designed for phase-transition studies and cross-disciplinary applications.
+> A modular simulation toolkit for classical spin systems, covering **two model families** (Ising and (RKKY) long-range generalizations) and **four algorithms** (each runnable with **annealing** or at a **fixed temperature**). Designed for phase-transition studies and cross-disciplinary applications.
 
 ## Authors
 
