@@ -18,15 +18,15 @@ This toolkit provides a unified environment for simulating and analyzing Ising-t
 
 **Benchmarks (2D Ising)**  
 - Critical temperature $T_c \approx 2.269$ 
-- Critical exponents $\beta = 0.125 \pm 0.003\)$, $\gamma = 1.75 \pm 0.05$
+- Critical exponents $\beta = 0.125 \pm 0.003$, $\gamma = 1.75 \pm 0.05$
 
 
 
 **Algorithmic takeaways**  
-- **Swendsen–Wang**: best efficiency near $\(T_c\)$ (mitigates critical slowing down).  
+- **Swendsen–Wang**: best efficiency near $T_c$ (mitigates critical slowing down).  
 - **BSAISA**: robust convergence from disordered initial states and rough landscapes.  
-- **Metropolis**: solid baselines; performance degrades near $\(T_c\)$ without clustering.
-- **Heat Bath**: solid baselines; performance degrades near $\(T_c\)$ without clustering.
+- **Metropolis**: solid baselines; performance degrades near $T_c$ without clustering.
+- **Heat Bath**: solid baselines; performance degrades near $T_c$ without clustering.
 
 ---
 
