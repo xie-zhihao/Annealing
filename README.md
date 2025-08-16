@@ -39,9 +39,7 @@ This toolkit provides a unified environment for simulating and analyzing Ising-t
 
 ### 2.2 RKKY long-range generalizations
 - Oscillatory long-range coupling:
-  $
-  J_{ij} = A \cdot \frac{\sin(2 k_F R_{ij})}{(2 k_F R_{ij})^2},
-  $
+  $J_{ij} = A \cdot \frac{\sin(2 k_F R_{ij})}{(2 k_F R_{ij})^2}$, 
   where $R_{ij}$ is pair distance and $k_F$ the Fermi wavevector.  
 - Features: competing interactions → **frustration** and multi-valley energy landscapes  
 - Implementation: distance cutoff $D_{\text{cut}}$ to balance accuracy and cost
