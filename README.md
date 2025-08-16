@@ -17,8 +17,8 @@
 This toolkit provides a unified environment for simulating and analyzing Ising-type models from the baseline 2D nearest-neighbor system to long-range RKKY-coupled variants. It implements multiple Monte Carlo strategies with optional annealing schedules, enabling quantitative studies of energy, magnetization, susceptibility, heat capacity, and critical exponents. It also supports side-by-side algorithm comparisons near criticality and in rugged energy landscapes.
 
 **Benchmarks (2D Ising)**  
-- Critical temperature $\(T_c \approx 2.269\)$ 
-- Critical exponents $\(\beta = 0.125 \pm 0.003\)$, $\(\gamma = 1.75 \pm 0.05\)$
+- Critical temperature $T_c \approx 2.269$ 
+- Critical exponents $\beta = 0.125 \pm 0.003\)$, $\gamma = 1.75 \pm 0.05$
 
 
 
@@ -34,47 +34,59 @@ This toolkit provides a unified environment for simulating and analyzing Ising-t
 
 ### 2.1 Ising (baseline)
 - Dimensions: 1D / 2D / 3D (2D nearest-neighbor by default)  
-- Spins: $\(\sigma_i \in \{+1, -1\}\)$  
+- Spins: $\sigma_i \in \{+1, -1\}$  
 - Interactions: nearest-neighbor coupling; optional external field
 
 ### 2.2 RKKY long-range generalizations
 - Oscillatory long-range coupling:
-  $$\[
+  $$
   J_{ij} = A \cdot \frac{\sin(2 k_F R_{ij})}{(2 k_F R_{ij})^2},
-  \]$$
-  where \(R_{ij}\) is pair distance and \(k_F\) the Fermi wavevector.  
+  $$
+  where $R_{ij}$ is pair distance and $k_F$ the Fermi wavevector.  
 - Features: competing interactions → **frustration** and multi-valley energy landscapes  
-- Implementation: distance cutoff \(D_{\text{cut}}\) to balance accuracy and cost
+- Implementation: distance cutoff $D_{\text{cut}}$ to balance accuracy and cost
 
 ---
 
 ## 3. Algorithms (annealing or fixed-T modes)
 
 1. **Metropolis**  
-   Acceptance \(P = \min\{1, e^{-\Delta E/T}\}\); minimal and reliable baseline.
+   Acceptance $P = \min\{1, e^{-\Delta E/T}\}$; minimal and reliable baseline.
 
 2. **Heat Bath**  
    Direct sampling from local-field conditionals; mixes quickly in homogeneous regions.
 
 3. **Swendsen–Wang (cluster)**  
    Build and flip correlated clusters; substantially reduces critical slowing down (compute/memory trade-offs apply).
+   Long range bonding improvement based on Fortuin-Kasteleyn mapping. (Underconstruction)
 
-4. **BSAISA** — *Backtracking Search Algorithm Inspired by Simulated Annealing*  
+5. **BSAISA** — *Backtracking Search Algorithm Inspired by Simulated Annealing*  
    Adaptive backtracking with annealing-style exploration; robust for disordered starts and rugged landscapes.
+
+6. **CNN-VMC** — *Convolutional Neural Network variational Monte Carlo*  
+   (Planning)
+
+5. **Quantum Monte Carlo** — *Mapping to higher dimensional Ising model and use Path Integral Monte Carlo*  
+   (Planning)
+
+6. **Quantum Hamiltonian Simulation** — *Quantum Algorithms to simulate Ising type model*  
+   (Planning)
+
 
 ---
 
 ## 4. Methodology & Observables
 
-- **Initialization**: random or structured configurations on an \(L \times L\) lattice (higher-D supported)  
+- **Initialization**: random or structured configurations on an $L_x \times L_y$ lattice, or even $\mathbb{R}^n$ model (higher-Dimension, n dimension supported)  
 - **Evolution**: apply chosen update rule; optional temperature schedules (annealing/tempering/adaptive)  
-- **Measured quantities**: energy \(E(T)\), magnetization \(M(T)\), susceptibility \(\chi(T)\), heat capacity \(C(T)\), Binder cumulants, autocorrelation times  
-- **Critical analysis**: finite-size scaling to estimate \(T_c\), \(\beta\), \(\gamma\) with uncertainty
+- **Measured quantities**: energy $E(T)$, magnetization $M(T)$, susceptibility $\chi(T)$, heat capacity $C(T)$, Binder cumulants (underconstruction), autocorrelation times (underconstruction)  
+- **Critical analysis**: finite-size scaling to estimate $T_c$, $\beta$, $\gamma$ and other critical exponents with uncertainty
 
 ---
 
 ## 5. Applications
-
+- **Alloy**
+- **Glass**
 - **Boltzmann Machines / Hopfield Neural Networks** (energy-based modeling, memory retrieval)  
 - **Liquid–Gas** analogies (order parameters and phase behavior)  
 - **Turbulence** (critical-phenomena-inspired diagnostics for complex flows)  
@@ -87,7 +99,7 @@ This toolkit provides a unified environment for simulating and analyzing Ising-t
 1. **Baseline Ising**: benchmarks across dimensions, boundary conditions, and lattice sizes  
 2. **Long-range & Disorder**: RKKY, dilute/impure alloys, glassy variants, and frustration  
 3. **Algorithm Engineering**: hybrid cluster/local updates; adaptive schedules; BSAISA refinements  
-4. **Finite-Size Scaling**: standardized pipelines for \(T_c\) and critical exponents with error bars  
+4. **Finite-Size Scaling**: standardized pipelines for $T_c$ and critical exponents with error bars  
 5. **Visualization & Diagnostics**: real-time curves, peak finding, cumulant crossings, autocorrelation analysis  
 6. **Applications**: magnetocaloric estimates, optimization mappings, financial agent-based experiments  
 7. **Extensibility**: higher dimensions, external fields, quantum-inspired extensions, heterogeneous computing
